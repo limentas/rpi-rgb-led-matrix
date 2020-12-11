@@ -283,5 +283,118 @@ struct HardwareMapping matrix_hardware_mappings[] = {
   },
 #endif
 
+  {
+
+   .name          = "pebpl118",
+
+    .output_enable = GPIO_BIT(18),
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(16),
+
+    /* Address lines */
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(23),
+    .c             = GPIO_BIT(24),
+    .d             = GPIO_BIT(7),
+
+    /*  reverse order */
+    .p0_r1         = GPIO_BIT(21),
+    .p0_g1         = GPIO_BIT(20),
+    .p0_b1         = GPIO_BIT(4),
+    .p0_r2         = GPIO_BIT(19),
+    .p0_g2         = GPIO_BIT(13),
+    .p0_b2         = GPIO_BIT(6),
+
+  },
+
+  {
+
+   .name          = "pebpl118_revE",
+
+    .output_enable = GPIO_BIT(18),
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(16),
+
+    /* Address lines */
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(23),
+    .c             = GPIO_BIT(24),
+    .d             = GPIO_BIT(7),
+
+    /*  straight order */
+    .p0_r1         = GPIO_BIT(27),
+    .p0_g1         = GPIO_BIT(5),
+
+    .p0_b1         = GPIO_BIT(6),
+    .p0_r2         = GPIO_BIT(13),
+
+    .p0_g2         = GPIO_BIT(19),
+    .p0_b2         = GPIO_BIT(26),
+
+    .p1_r1         = GPIO_BIT(12),
+    .p1_g1         = GPIO_BIT(4),
+
+    .p1_b1         = GPIO_BIT(20),
+    .p1_r2         = GPIO_BIT(21),
+
+  },
+
+  {
+
+    .name          = "pebpl118_revG",
+
+    .output_enable = GPIO_BIT(12),
+    .clock         = GPIO_BIT(5),
+    .strobe        = GPIO_BIT(6),
+
+    /* Address lines */
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(23),
+    .c             = GPIO_BIT(24),
+
+    /*  striaght order */
+    .p0_r1         = GPIO_BIT(4),
+    .p0_g1         = GPIO_BIT(17),
+
+    .p0_b1         = GPIO_BIT(13),
+    .p0_r2         = GPIO_BIT(19),
+
+    .p0_g2         = GPIO_BIT(26),
+    .p0_b2         = GPIO_BIT(16),
+
+    .p1_r1         = GPIO_BIT(20),
+    .p1_g1         = GPIO_BIT(21),
+
+    .p1_b1         = GPIO_BIT(0),
+    .p1_r2         = GPIO_BIT(1),
+
+  },
+
+  {
+
+   .name          = "pebpl125_revA",
+
+    .output_enable = GPIO_BIT(18),
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(16),
+
+    /* Address lines */
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(23),
+    .c             = GPIO_BIT(24),
+    .d             = GPIO_BIT(7),
+
+    .p0_r1         = GPIO_BIT(27),  //21
+    .p0_g1         = GPIO_BIT(12),  //20
+    .p0_b1         = GPIO_BIT(4),  //4
+    .p0_r2         = GPIO_BIT(19), //19
+    .p0_g2         = GPIO_BIT(13), //13
+    .p0_b2         = GPIO_BIT(6),  //6
+    .p1_r1         = GPIO_BIT(14), //14
+    .p1_g1         = GPIO_BIT(15),  //15
+  },
+
+
   {0}
 };
+
