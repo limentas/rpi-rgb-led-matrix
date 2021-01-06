@@ -407,17 +407,17 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .b             = GPIO_BIT(16),
     .c             = GPIO_BIT(13),
 
-    .p0_r1         = GPIO_BIT(22),
-    .p0_g1         = GPIO_BIT(12),
+    .p0_r1         = GPIO_BIT(12),
+    .p0_g1         = GPIO_BIT(22),
     .p0_b1         = GPIO_BIT(24),
 
-    .p0_r2         = GPIO_BIT(0),
+    .p0_r2         = GPIO_BIT(7),
     .p0_g2         = GPIO_BIT(23),
-    .p0_b2         = GPIO_BIT(7),
+    .p0_b2         = GPIO_BIT(0),
 
-    .p1_r1         = GPIO_BIT(6),
+    .p1_r1         = GPIO_BIT(1),
     .p1_g1         = GPIO_BIT(5),
-    .p1_b1         = GPIO_BIT(1),
+    .p1_b1         = GPIO_BIT(6),
   },
 
 
