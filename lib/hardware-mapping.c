@@ -459,6 +459,27 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .p2_g2         = GPIO_BIT(16),
     .p2_b2         = GPIO_BIT(26),
   },
+  
+  {
+
+   .name          = "pebpl125_revG",
+
+    .output_enable = GPIO_BIT(18),
+    .clock         = GPIO_BIT(20),
+    .strobe        = GPIO_BIT(26),
+
+    /* Address lines */
+    .a             = GPIO_BIT(19),
+    .b             = GPIO_BIT(16),
+    .c             = GPIO_BIT(13),
+
+    .p0_r1         = GPIO_BIT(6),
+    
+    .p0_g1         = GPIO_BIT(5),
+    
+    .p0_b1         = GPIO_BIT(1),
+
+  },
 
 
   {0}
