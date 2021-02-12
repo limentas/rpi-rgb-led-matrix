@@ -489,8 +489,8 @@ struct HardwareMapping matrix_hardware_mappings[] = {
     .strobe        = GPIO_BIT(4),
 
     /* Address lines */
-    .a             = GPIO_BIT(23),
-    .b             = GPIO_BIT(24),
+    .a             = GPIO_BIT(24),
+    .b             = GPIO_BIT(25),
     .c             = GPIO_BIT(22),
     .d             = GPIO_BIT(23),
     .e             = GPIO_BIT(15),  /* RxD kept free unless 1:64 */
