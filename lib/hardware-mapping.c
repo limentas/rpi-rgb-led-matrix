@@ -423,9 +423,9 @@ struct HardwareMapping matrix_hardware_mappings[] = {
   {
     .name          = "pebpl111_old",
 
-    .output_enable = GPIO_BIT(17),
-    .clock         = GPIO_BIT(4),
-    .strobe        = GPIO_BIT(18),
+    .output_enable = GPIO_BIT(4),
+    .clock         = GPIO_BIT(18),
+    .strobe        = GPIO_BIT(17),
 
     /* Address lines */
     .a             = GPIO_BIT(24),
