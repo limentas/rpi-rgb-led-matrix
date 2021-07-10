@@ -300,7 +300,7 @@ void PrintMatrixFlags(FILE *out, const RGBMatrix::Options &d,
           "(Default: %d).\n"
           "\t--led-chain=<chained>     : Number of daisy-chained panels. "
           "(Default: %d).\n"
-          "\t--led-parallel=<parallel> : Parallel chains. range=1..3 "
+          "\t--led-parallel=<parallel> : Parallel chains. range=1..5 "
 #ifdef ENABLE_WIDE_GPIO_COMPUTE_MODULE
           "(6 for CM3) "
 #endif
@@ -399,8 +399,8 @@ bool RGBMatrix::Options::Validate(std::string *err_in) const {
 #else
   const bool is_cm = false;
 #endif
-  if (parallel < 1 || parallel > (is_cm ? 6 : 3)) {
-    err->append("Parallel outside usable range (1..3 allowed"
+  if (parallel < 1 || parallel > (is_cm ? 6 : 5)) {
+    err->append("Parallel outside usable range (1..5 allowed"
 #ifdef ENABLE_WIDE_GPIO_COMPUTE_MODULE
                 ", up to 6 only for CM3"
 #endif
