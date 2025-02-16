@@ -439,6 +439,21 @@ protected:
   }
 };
 
+class Stripe4xMultiplexMapper : public MultiplexMapperBase {
+public:
+  Stripe4xMultiplexMapper() : MultiplexMapperBase("Stripe4X", 2) {}
+
+  static const int stripe_parts_ = 4;
+
+  void MapSinglePanel(int x, int y, int *matrix_x, int *matrix_y) const {
+    const auto stripe_part_height = panel_rows_/2 / 4;
+    const auto current_part_index = (y % (panel_rows_/2)) / stripe_part_height;
+    *matrix_x = current_part_index * panel_cols_ + x;
+    const auto current_matrix_half = y / (panel_rows_/2);
+    *matrix_y = current_matrix_half * stripe_part_height + y % stripe_part_height;
+  }
+};
+
 /*
  * Here is where the registration happens.
  * If you add an instance of the mapper here, it will automatically be
@@ -465,6 +480,7 @@ static MuxMapperList *CreateMultiplexMapperList() {
   result->push_back(new P10CoremanMapper());
   result->push_back(new P8Outdoor1R1G1BMultiplexMapper());
   result->push_back(new FlippedStripeMultiplexMapper());
+  result->push_back(new Stripe4xMultiplexMapper());
   return result;
 }
 
