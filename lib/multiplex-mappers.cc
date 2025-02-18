@@ -441,7 +441,7 @@ protected:
 
 class Stripe4xMultiplexMapper : public MultiplexMapperBase {
 public:
-  Stripe4xMultiplexMapper() : MultiplexMapperBase("Stripe4X", 2) {}
+  Stripe4xMultiplexMapper() : MultiplexMapperBase("Stripe4X", 4) {}
 
   static const int stripe_parts_ = 4;
 
