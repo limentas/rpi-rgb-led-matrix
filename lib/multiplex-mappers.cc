@@ -439,6 +439,18 @@ protected:
   }
 };
 
+/* The panel consists of two halfs. Each half is wired into one stripe devided into 4 parts.
+ * The stripe parts are wired from bottom to top of the matrix like on the picture:
+ *
+ *  ---->
+ *    \
+ *  ----\
+ *    \
+ *  ----\
+ *    \
+ *  >---\
+ */
+
 class Stripe4xMultiplexMapper : public MultiplexMapperBase {
 public:
   Stripe4xMultiplexMapper() : MultiplexMapperBase("Stripe4X", 4) {}
@@ -446,9 +458,9 @@ public:
   static const int stripe_parts_ = 4;
 
   void MapSinglePanel(int x, int y, int *matrix_x, int *matrix_y) const {
-    const auto stripe_part_height = panel_rows_/2 / 4;
+    const auto stripe_part_height = panel_rows_/2 / 4; // 4
     const auto current_part_index = (y % (panel_rows_/2)) / stripe_part_height;
-    *matrix_x = current_part_index * panel_cols_ + x;
+    *matrix_x = (3 - current_part_index) * panel_cols_ + x;
     const auto current_matrix_half = y / (panel_rows_/2);
     *matrix_y = current_matrix_half * stripe_part_height + y % stripe_part_height;
   }
